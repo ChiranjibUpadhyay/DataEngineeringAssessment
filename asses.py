@@ -1,12 +1,14 @@
 import mysql.connector
 
 try:
-    conn=mysql.connector.connect(user='root',password='pavillion',host='localhost',database='incubyte')
+    #creates a connection object for database
+    conn=mysql.connector.connect(user='root',password='*********',host='localhost',database='incubyte')
 except:
     print("Connection not successful")
 
 print("Connection Successful")
 
+#creating a cursor object for accessing and querying databse
 cursor=conn.cursor()
 
 sql1='''CREATE TABLE Table_Global(
